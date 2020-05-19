@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="12">
+      <Unit0>
+        <Filename Value="Z1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="25"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <TopLine Value="94"/>
+        <CursorPos Y="109"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="modul.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="50" Y="45"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\components\lazutils\lazutf8classes.pas"/>
+        <UnitName Value="LazUTF8Classes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="140"/>
+        <CursorPos X="3" Y="156"/>
+        <UsageCount Value="13"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\2 задача\unit1.lfm"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="modil.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="44" Y="5"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9722"/>
+        <CursorPos Y="9742"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\components\lazutils\laz2_xmlcfg.pas"/>
+        <UnitName Value="Laz2_XMLCfg"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="632"/>
+        <CursorPos Y="644"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\lcl\include\menuitem.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="286"/>
+        <CursorPos Y="298"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2662"/>
+        <CursorPos Y="2681"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1564"/>
+        <CursorPos Y="1583"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="377"/>
+        <CursorPos X="20" Y="381"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+    </Units>
+    <JumpHistory Count="9" HistoryIndex="8">
+      <Position1>
+        <Filename Value="modul.pas"/>
+        <Caret Line="41" Column="11" TopLine="25"/>
+      </Position1>
+      <Position2>
+        <Filename Value="modul.pas"/>
+      </Position2>
+      <Position3>
+        <Filename Value="modul.pas"/>
+        <Caret Line="40" Column="9" TopLine="33"/>
+      </Position3>
+      <Position4>
+        <Filename Value="modul.pas"/>
+        <Caret Line="29" Column="16" TopLine="22"/>
+      </Position4>
+      <Position5>
+        <Filename Value="modul.pas"/>
+        <Caret Line="39" Column="18" TopLine="24"/>
+      </Position5>
+      <Position6>
+        <Filename Value="modul.pas"/>
+        <Caret Line="36" Column="29" TopLine="24"/>
+      </Position6>
+      <Position7>
+        <Filename Value="modul.pas"/>
+        <Caret Line="30" Column="15" TopLine="28"/>
+      </Position7>
+      <Position8>
+        <Filename Value="modul.pas"/>
+        <Caret Line="43" Column="16" TopLine="32"/>
+      </Position8>
+      <Position9>
+        <Filename Value="modul.pas"/>
+        <Caret Line="41" Column="23" TopLine="35"/>
+      </Position9>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
