@@ -21,23 +21,23 @@ type
     Label3: TLabel;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
-    MenuItem2: TMenuItem;
-    MenuItem3: TMenuItem;
-    MenuItem4: TMenuItem;
-    MenuItem5: TMenuItem;
-    MenuItem6: TMenuItem;
+    MSpravka: TMenuItem;
+    MExit: TMenuItem;
+    MSave: TMenuItem;
+    MSaveOt: TMenuItem;
+    MZag: TMenuItem;
     OpenDialog1: TOpenDialog;
     SaveDialog1: TSaveDialog;                  //Поля класса
     SG: TStringGrid;
-    procedure Button1Click(Sender: TObject);   //Методы класса (Объявление)
-    procedure FormCreate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
-    procedure MenuItem1Click(Sender: TObject);
-    procedure MenuItem2Click(Sender: TObject);
-    procedure MenuItem3Click(Sender: TObject);
-    procedure MenuItem4Click(Sender: TObject);
-    procedure MenuItem5Click(Sender: TObject);
-    procedure MenuItem6Click(Sender: TObject); //Методы класса (Объявление)
+    //Методы класса (Объявление)
+    procedure Button1Click(Sender: TObject);   //Активация рассчетов
+    procedure FormShow(Sender: TObject);       //Обнуление длины масива
+    procedure MSpravkaClick(Sender: TObject);  //Вызов справки
+    procedure MExitClick(Sender: TObject);     //Выход из программы
+    procedure MSaveClick(Sender: TObject);     //Вызов сохранения данных
+    procedure MSaveOtClick(Sender: TObject);   //Вызов отчета
+    procedure MZagClick(Sender: TObject);      //Вызов загрузки данных
+    //Методы класса (Объявление)
   private
 
   public
@@ -53,11 +53,6 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-
-procedure TForm1.MenuItem1Click(Sender: TObject);
-begin
-
-end;
 
 procedure TForm1.Button1Click(Sender: TObject);       //Метод класса (Определение)
 var r,n:real;
@@ -79,34 +74,31 @@ begin
 end;
 
 
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
   setlength(m,0);
 end;
 
-procedure TForm1.MenuItem2Click(Sender: TObject);
+procedure TForm1.MSpravkaClick(Sender: TObject);
 begin
   ShowMessage(INF);
 end;
 
-procedure TForm1.MenuItem3Click(Sender: TObject);
+procedure TForm1.MExitClick(Sender: TObject);
 begin
   Form1.close;
 end;
 
-procedure TForm1.MenuItem4Click(Sender: TObject);
+procedure TForm1.MSaveClick(Sender: TObject);
 begin
   if savedialog1.Execute then
   begin
-    Save(savedialog1.FileName, EditN.Text, EditR.Text);
+    Save(savedialog1.FileName, strtofloat(EditN.Text), strtofloat(EditR.Text));
   end;
 end;
 
-procedure TForm1.MenuItem5Click(Sender: TObject);
+procedure TForm1.MSaveOtClick(Sender: TObject);
 begin
   if Savedialog1.Execute then
   begin
@@ -117,16 +109,16 @@ begin
   end;
 end;
 
-procedure TForm1.MenuItem6Click(Sender: TObject);
-var s1,s2:string;
+procedure TForm1.MZagClick(Sender: TObject);
+var s1,s2:real;
 begin
   if opendialog1.Execute then
   begin
     if opendialog1.FileName<>'' then
     begin
       Open(Opendialog1.FileName,s1,s2);
-      editN.Text:=s1;
-      editR.Text:=s2;
+      editN.Text:=floattostr(s1);
+      editR.Text:=floattostr(s2);
     end;
   end;
 end;
