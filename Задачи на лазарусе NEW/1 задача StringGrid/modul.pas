@@ -1,4 +1,4 @@
-Unit modul;
+﻿Unit modul;
 {$mode objfpc}{$H+}
 interface
 uses
@@ -9,9 +9,9 @@ type data = record
           res:real;
      end;
      mas = array of data;
-procedure save(FileName:string;s1,s2:real);//Сохранения начальных данных
+procedure save(FileName:string;s1,s2:real);          //Сохранения начальных данных
 procedure OTCH(SG:Integer;FileName:string;var m:mas);//вывод отчета
-procedure Open(FileName:string;var N,R:real);//Загрузка ранее сохраненных данных
+procedure Open(FileName:string;var N,R:real);        //Загрузка ранее сохраненных данных
 implementation
 procedure save(FileName:string; s1,s2:real);
 var f:file of real;
