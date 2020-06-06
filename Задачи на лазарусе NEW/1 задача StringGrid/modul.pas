@@ -9,17 +9,17 @@ type data = record
           res:real;
      end;
      mas = array of data;
-procedure save(FileName:string;s1,s2:string);
-procedure OTCH(SG:Integer;FileName:string;var m:mas);
-procedure Open(FileName:string;var N,R:string);
+procedure save(FileName:string;s1,s2:real);//Сохранения начальных данных
+procedure OTCH(SG:Integer;FileName:string;var m:mas);//вывод отчета
+procedure Open(FileName:string;var N,R:real);//Загрузка ранее сохраненных данных
 implementation
-procedure save(FileName:string; s1,s2:string);
-var f:text;
+procedure save(FileName:string; s1,s2:real);
+var f:file of real;
 begin
   Assignfile(f,FileName);
   rewrite(f);
-  writeln(f,s1);
-  writeln(f,s2);
+  write(f,s1);
+  write(f,s2);
   closefile(f);
 end;
 procedure OTCH(SG:Integer;FileName:string;var m:mas);
@@ -40,16 +40,15 @@ begin
         end;
     closefile(f);
 end;
-procedure Open(FileName:string;var N,R:string);
-var f:text;
-    s:string;
+procedure Open(FileName:string;var N,R:real);
+var f:file of real;
+    //s:string;
 begin
     Assignfile(f,FileName);
     reset(f);
-    readln(f,s);
-    N:=s;
-    readln(f,s);
-    R:=s;
+    seek(f,0);
+    read(f,N);
+    read(f,R);
     closefile(f);
 end;
 
