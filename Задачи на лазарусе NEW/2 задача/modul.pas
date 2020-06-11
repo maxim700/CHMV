@@ -4,34 +4,32 @@ unit modul;
 
 interface
 
-procedure Save(FileName:string; A,B,C:String);
-procedure Open(FileName:string;var A,B,C:String);
+procedure Save(FileName:string; A,B,C:real);
+procedure Open(FileName:string;var A,B,C:real);
 
 implementation
-procedure Save(FileName:string; A,B,C:String);
-var f:text;
+procedure Save(FileName:string; A,B,C:real);
+var f:file of real;
 begin
     Assignfile(f,FileName);
     rewrite(f);
-    writeln(f,A);
-    writeln(f,B);
-    writeln(f,C);
+    write(f,A);
+    write(f,B);
+    write(f,C);
     closefile(f);
 end;
 
 
-procedure Open(FileName:string;var A,B,C:String);
-  var f:text;
+procedure Open(FileName:string;var A,B,C:real);
+  var f:file of real;
     s:string;
 begin
     Assignfile(f,FileName);
     reset(f);
-    readln(f,s);
-    A:=s;
-    readln(f,s);
-    B:=s;
-    readln(f,s);
-    C:=s;
+    seek(f,0);
+    read(f,A);
+    read(f,B);
+    read(f,C);
     closefile(f);
 end;
 

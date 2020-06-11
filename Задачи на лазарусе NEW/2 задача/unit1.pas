@@ -100,7 +100,7 @@ procedure TForm1.MenuItem4Click(Sender: TObject);
 begin
   if savedialog1.Execute then
   begin
-       Save(Savedialog1.FileName,EditA.text,EditB.text,EditC.text);
+       Save(Savedialog1.FileName,strtofloat(EditA.text),strtofloat(EditB.text),strtofloat(EditC.text));
   end;
 end;
 
@@ -113,16 +113,16 @@ begin
 end;
 
 procedure TForm1.MenuItem6Click(Sender: TObject);
-var A,B,C:string;
+var A,B,C:real;
 begin
   if opendialog1.Execute then
   begin
     if opendialog1.Filename<>'' then
     begin
       Open(Opendialog1.FileName,A,B,C);
-      EditA.text:=A;
-      EditB.text:=B;
-      EditC.text:=C;
+      EditA.text:=floattostr(A);
+      EditB.text:=floattostr(B);
+      EditC.text:=floattostr(C);
     end;
   end;
 end;

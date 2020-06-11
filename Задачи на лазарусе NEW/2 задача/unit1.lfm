@@ -4,7 +4,6 @@ object Form1: TForm1
   Top = 287
   Width = 343
   BorderIcons = []
-  BorderStyle = bsSingle
   Caption = 'Z2'
   ClientHeight = 476
   ClientWidth = 343
