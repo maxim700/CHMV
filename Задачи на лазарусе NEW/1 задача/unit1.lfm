@@ -1,71 +1,103 @@
 object Form1: TForm1
-  Left = 1018
-  Height = 432
-  Top = 280
-  Width = 282
+  Left = 1240
+  Height = 450
+  Top = 285
+  Width = 348
   BorderIcons = []
-  BorderStyle = bsSingle
   Caption = 'Z8'
-  ClientHeight = 407
-  ClientWidth = 282
+  ClientHeight = 425
+  ClientWidth = 348
   DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
   OnShow = FormShow
   LCLVersion = '2.0.6.0'
   object EditR: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label2
     Left = 20
     Height = 28
-    Top = 104
+    Top = 100
     Width = 100
+    BorderSpacing.Top = 20
     TabOrder = 0
     Text = '2'
   end
   object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
     Left = 20
     Height = 20
-    Top = 16
+    Top = 20
     Width = 137
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 20
     Caption = 'Количество сторон:'
     ParentColor = False
   end
   object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
     Left = 20
     Height = 20
     Top = 80
     Width = 50
+    BorderSpacing.Top = 60
     Caption = 'Радиус:'
     ParentColor = False
   end
   object Label3: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = EditR
     Left = 20
     Height = 20
-    Top = 152
+    Top = 150
     Width = 42
+    BorderSpacing.Top = 50
     Caption = 'Отчет:'
     ParentColor = False
   end
   object Button1: TButton
-    Left = 160
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Label2
+    AnchorSideBottom.Side = asrBottom
+    Left = 234
     Height = 31
     Top = 69
     Width = 94
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 20
     Caption = 'Посчитай'
     OnClick = Button1Click
     TabOrder = 1
   end
   object PoleOtcheta: TMemo
+    AnchorSideLeft.Control = Label3
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
     Left = 20
-    Height = 209
-    Top = 176
-    Width = 236
+    Height = 235
+    Top = 170
+    Width = 308
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 20
     ScrollBars = ssAutoVertical
     TabOrder = 2
   end
   object EditN: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
     Left = 20
     Height = 28
-    Top = 37
+    Top = 40
     Width = 100
     TabOrder = 3
     Text = '4'
@@ -99,12 +131,10 @@ object Form1: TForm1
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Text|*.txt'
-    left = 288
-    top = 80
+    left = 336
   end
   object SaveDialog1: TSaveDialog
     Filter = 'Text|*.txt'
-    left = 288
-    top = 152
+    left = 232
   end
 end

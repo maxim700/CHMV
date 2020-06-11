@@ -1,29 +1,29 @@
 Unit modul;
 {$mode objfpc}{$H+}
 interface
-procedure save(Filename:string;s1,s2:string);
-procedure Open(FileName:string;var N,R:string);
+procedure save(Filename:string;s1,s2:real);
+procedure Open(FileName:string;var N,R:real);
 implementation
-procedure save(Filename:string;s1,s2:string);
-var f:text;
+procedure save(Filename:string;s1,s2:real);
+var f:file of real;
 begin
   Assignfile(f,FileName);
   rewrite(f);
-  writeln(f,s1);
-  writeln(f,s2);
+  write(f,s1);
+  write(f,s2);
   closefile(f);
 end;
 
-procedure Open(FileName:string;var N,R:string);
-var f:text;
+procedure Open(FileName:string;var N,R:real);
+var f:file of real;
     s:string;
 begin
+
     Assignfile(f,FileName);
     reset(f);
-    readln(f,s);
-    N:=s;
-    readln(f,s);
-    R:=s;
+    seek(f,0);
+    read(f,N);
+    read(f,R);
     closefile(f);
 end;
 

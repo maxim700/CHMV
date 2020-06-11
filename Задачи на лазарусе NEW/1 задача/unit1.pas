@@ -98,7 +98,7 @@ procedure TForm1.MenuItem4Click(Sender: TObject);
 begin
   if savedialog1.Execute then
   begin
-       Save(savedialog1.FileName, EditN.Text, EditR.Text);
+       Save(savedialog1.FileName, strtofloat(EditN.Text), strtofloat(EditR.Text));
   end;
 end;
 
@@ -111,15 +111,15 @@ begin
 end;
 
 procedure TForm1.MenuItem6Click(Sender: TObject);
-var s1,s2:string;
+var s1,s2:real;
 begin
   if opendialog1.Execute then
   begin
     if opendialog1.FileName<>'' then
     begin
       Open(Opendialog1.FileName,s1,s2);
-      editN.text:=s1;
-      editR.Text:=s2;
+      editN.text:=floattostr(s1);
+      editR.Text:=floattostr(s2);
     end;
   end;
 end;
